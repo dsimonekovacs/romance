@@ -1,0 +1,13 @@
+{
+  "name": "romance",
+  "version": "1.0.0",
+  "description": "Markovian Poem Generator",
+  "main": "built/index.js",
+  "repository": "git@github.com:dsimonekovacs/romance.git",
+  "author": "Simone Kovacs <dsimonekovacs@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "go": "tsc && node built/index.js"
+  }
+}
