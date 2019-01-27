@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function markovChain(textArray) {
     var markovObject = {};
     // if (textArray.length = 0) {
@@ -10,9 +12,9 @@ function markovChain(textArray) {
         var nextWords = [];
         var newWord = textArray.slice(i + 1, i + 2);
         nextWords.push(newWord);
+        [].concat.apply([], nextWords);
         markovObject.word = nextWords;
     }
     return markovObject;
 }
-var text = ['ever', 'since', 'i', 'left', 'the', 'city', 'you', 'you', 'you', 'you', 'and', 'me', 'we', 'just', 'dont', 'get', 'along'];
-console.log(markovChain(text));
+exports.default = markovChain;

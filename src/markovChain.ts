@@ -2,7 +2,7 @@ interface markovObject {
     word?: Array<string>
 }
 
-function markovChain(textArray) {
+export default function markovChain(textArray) {
     let markovObject: markovObject = {};
 
     // if (textArray.length = 0) {
@@ -17,11 +17,9 @@ function markovChain(textArray) {
 
         let newWord = textArray.slice(i + 1, i + 2);
         nextWords.push(newWord);
+        [].concat.apply([], nextWords);
         markovObject.word = nextWords;
     }
     return markovObject;
 }
 
-let text = [ 'ever', 'since', 'i', 'left', 'the', 'city', 'you', 'you', 'you', 'you', 'and', 'me', 'we', 'just', 'dont', 'get', 'along']
-
-console.log(markovChain(text))
