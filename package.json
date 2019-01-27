@@ -9,5 +9,8 @@
   "scripts": {
     "build": "tsc",
     "go": "tsc && node built/index.js"
+  },
+  "dependencies": {
+    "typescript": "^3.2.4"
   }
 }
