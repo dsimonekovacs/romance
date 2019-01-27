@@ -1,4 +1,4 @@
-const cleanString = (string: string) => {
+const cleanString = (string: string): string => {
     string = string.replace(/[\.,\/#!$%\^&\*;:{}=\-_`~()]/g,''); // remove punctuation
     string = string.replace(/\s+/g,' '); // convert white space to space
     string = string.replace(/^\s+/g, ''); // remove white space in beginning
@@ -6,7 +6,7 @@ const cleanString = (string: string) => {
     return string;
 }
 
-const parseText = (string: string) => {
+const parseText = (string: string): Array<string> => {
     string = cleanString(string);
     return string.split(' ');
 }
