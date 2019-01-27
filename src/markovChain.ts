@@ -1,5 +1,9 @@
+interface markovObject {
+    word?: Array<string>
+}
+
 function markovChain(textArray) {
-    let markovObject = {};
+    let markovObject: markovObject = {};
 
     // if (textArray.length = 0) {
     //     return undefined;
